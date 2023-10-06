@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Registered Users</h1>
+    <ul class="list-group mt-3">
+        {% for name, organization in registered_users.items() %}
+        <li class="list-group-item">{{ name }} - {{ organization }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
